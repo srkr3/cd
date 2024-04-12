@@ -1,10 +1,7 @@
-/*b) Write a Program for lexical analyzer recognize identifiers, constants, operators and key
-words of the mini language.*/
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
 
-// Function to check if the character is a delimiter
 bool isDelimiter(char ch) {
 	int i;
     char delimiters[] = " ,;><()[]{}";
@@ -16,7 +13,6 @@ bool isDelimiter(char ch) {
     return false;
 }
 
-// Function to check if the character is an operator
 bool isOperator(char ch) {
 	int i;
     char operators[] = "+-*/=><";
@@ -28,7 +24,6 @@ bool isOperator(char ch) {
     return false;
 }
 
-// Function to check if the string is a keyword
 bool isKeyword(char* str) {
 	int i;
     char* keywords[] = {"if", "else", "while", "for", "int", "float", "char", "return"};
@@ -40,7 +35,6 @@ bool isKeyword(char* str) {
     return false;
 }
 
-// Function to check if the string is a valid identifier
 bool isValidIdentifier(char* str) {
 	int i;
     
@@ -52,7 +46,6 @@ bool isValidIdentifier(char* str) {
     return true;
 }
 
-// Function to check if the string is an integer
 bool iscon(char* str) {
 	int i;
     for ( i = 0; i < strlen(str); i++) {
